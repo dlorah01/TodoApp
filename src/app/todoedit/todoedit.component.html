@@ -1,0 +1,31 @@
+<h1>Editar Item: </h1>
+<br/>
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="angForm" novalidate>
+      <div class="form-group">
+        <label class="col-md-4">Título: </label>
+        <input type="text" class="form-control" formControlName="todo_name" #todo_name [(ngModel)] = "todoitem.todo_name" />
+      </div>
+      <div *ngIf="angForm.controls['todo_name'].invalid && (angForm.controls['todo_name'].dirty || angForm.controls['todo_name'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['todo_name'].errors.required">
+          Título del Item es necesario.
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Descripción: </label>
+        <input type="text" class="form-control" formControlName="todo_description" #todo_description [(ngModel)] = "todoitem.todo_description" />
+      </div>
+      <div *ngIf="angForm.controls['todo_description'].invalid && (angForm.controls['todo_description'].dirty || angForm.controls['todo_description'].touched)" class="alert alert-danger">
+        <div *ngIf="angForm.controls['todo_description'].errors.required">
+          Descripción del Item es necesario.
+        </div>
+      </div>
+      <div class="form-group">
+        <button (click)="updateItem(todo_name.value, todo_description.value)"
+        [disabled]="angForm.invalid" 
+        class="btn btn-primary">Actualizar Item</button>
+      </div>
+    </form>
+  </div>
+</div>
