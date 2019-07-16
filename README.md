@@ -1,10 +1,16 @@
-# Todolist
+# TodoApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8. The backend was generated using NodeJS with Express.JS and MongoDB as the database.
 
+## Backend
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+You need to have installed `MongoDB` on your computer to run this server. After going to `todolist/api Folder`, run `npm install` to download all the dependencies needed to deploy the Node Server. Run `npm start` for a dev server. Navigate to `http://localhost:4000/todo`. This URL will automatically give the items you have stored.
+
+## Fronted
+## Development server
+
+Download or clone this project. After going to `todolist Folder`, run `npm install` to download all the dependencies needed to deploy the Angular Project. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
