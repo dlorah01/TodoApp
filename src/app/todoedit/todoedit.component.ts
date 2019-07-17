@@ -39,8 +39,9 @@ export class TodoeditComponent implements OnInit {
 
   updateItem(todo_name, todo_description) {
    this.route.params.subscribe(params => {
-      this.ts.updateItem(todo_name, todo_description, params['id']);
-      this.router.navigate(['todo']);
+      this.ts.updateItem(todo_name, todo_description, params['id']).subscribe((res)=>{
+        this.router.navigate(['todo']);
+      });
 });
 }
 

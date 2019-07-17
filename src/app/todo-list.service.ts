@@ -15,8 +15,7 @@ export class TodoListService {
       todo_description: todo_description
     };
     console.log(obj);
-    this.http.post(`${this.uri}/add`, obj)
-        .subscribe(res => console.log('Done'));
+    return this.http.post(`${this.uri}/add`, obj);
   }
 
   getItems() {
@@ -38,10 +37,7 @@ export class TodoListService {
         todo_name: todo_name,
         todo_description: todo_description
       };
-    this
-      .http
-      .post(`${this.uri}/update/${id}`, obj)
-      .subscribe(res => console.log('Done'));
+    return this.http.post(`${this.uri}/update/${id}`, obj);
   }
 
   deleteItem(id) {

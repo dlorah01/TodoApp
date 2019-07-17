@@ -24,8 +24,9 @@ export class TodoaddComponent implements OnInit {
   }
 
   addItem(todo_name, todo_description) {
-    this.ts.addItem(todo_name, todo_description);
-    this.router.navigate(['todo']);
+    this.ts.addItem(todo_name, todo_description).subscribe((res)=>{
+      this.router.navigate(['todo']);
+    });
   }
 
 
